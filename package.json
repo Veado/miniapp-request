@@ -1,0 +1,23 @@
+{
+  "name": "miniapp-request",
+  "version": "0.0.1",
+  "description": "Promise based HTTP client for Wechat Miniapp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veado/miniapp-request.git"
+  },
+  "keywords": [
+    "miniapp",
+    "request"
+  ],
+  "author": "Inoch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Veado/miniapp-request/issues"
+  },
+  "homepage": "https://github.com/Veado/miniapp-request#readme"
+}
