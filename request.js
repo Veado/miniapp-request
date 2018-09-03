@@ -9,7 +9,10 @@ function Request(config) {
 }
 
 Request.prototype.request = function(config) {
+  
   var config = merge({}, this.defaults, config)
+
+  config = config.before(config)
   
   return new Promise(function(resolve, reject){
     // console.log('this',this)
@@ -18,7 +21,6 @@ Request.prototype.request = function(config) {
       data: config.data,
       header: config.header,
       success: function(res) {
-        console.log(this)
         resolve(res)
       },
       fail: function(e) {

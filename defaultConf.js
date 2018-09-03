@@ -7,6 +7,7 @@ var defaultConfig  = {
   header: defaultContentType,
   baseUrl: '',
   timeout: null,
+  before: function(config) {return config}
 }
 
 module.exports = defaultConfig
