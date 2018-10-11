@@ -12,11 +12,21 @@ Request.prototype.request = function(config) {
 
     config.before(config).then(function(config){
       wx.request({
-        url: config.baseUrl + config.url, //仅为示例，并非真实的接口地址
+        url: config.baseUrl + config.url, 
         data: config.data,
         header: config.header,
         success: function(res) {
-          resolve(res)
+          //调用拦截器 
+          var result = config.interceptor(res)
+          //处理promise或者同步的函数情况
+          if(Object.prototype.toString.call(result) === "[object Promise]") {
+            result.then(promiseRes=>{
+              resolve(promiseRes)
+            })
+          }else {
+            resolve(result)
+          }
+          
         },
         fail: function(e) {
           reject(e)

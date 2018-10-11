@@ -9,7 +9,10 @@ var defaultConfig  = {
   timeout: null,
   before: function(config) {return new Promise(function(resolve){
     resolve(config)
-  })}
+  })},
+  interceptor: function(res) {
+    return res 
+  }
 }
 
 module.exports = defaultConfig

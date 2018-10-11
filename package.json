@@ -1,6 +1,6 @@
 {
   "name": "miniapp-request",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Promise based HTTP client for Wechat Miniapp.",
   "main": "index.js",
   "scripts": {
